@@ -5,11 +5,11 @@ weather-lamp
 Arduino
 -------
 
-緑のLED 11番  
-青のLED 10番  
-赤のLED 9番  
-LM35DZ A0番  
-CdS A1番  
+緑のLED -> 11番  
+青のLED -> 10番  
+赤のLED -> 9番  
+LM35DZ  -> A0番  
+CdS     -> A1番  
 
 gem install
 -----------
