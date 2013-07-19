@@ -7,6 +7,15 @@ require 'arduino_firmata'
 require 'term/ansicolor'
 include Term::ANSIColor
 
+
+arduino = ArduinoFirmata.connect ARGV.shift
+pin_num = 11 #Green
+pin_num = 10 #Blue
+pin_num = 9  #Red
+
+puts "ArduinoFirmata Connect!!"
+sleep 1 #演出 ちょっと遅れるとかっこいい
+
 w = 0
 day = 0
 #気象庁のアメダスのデータ（1時間ごと更新）
@@ -51,13 +60,7 @@ kaze = w[2].to_f
 shitsu = w[3].to_i
 #kiatsu = w[4].to_f
 
-arduino = ArduinoFirmata.connect ARGV.shift
-pin_num = 11 #Green
-pin_num = 10 #Blue
-pin_num = 9  #Red
-
-puts "ArduinoFirmata Connect!!"
-sleep 1 #演出
+sleep 0.5 #演出
 
 #部屋の気温
 lm35 = arduino.analog_read(0)*100*5/1024
